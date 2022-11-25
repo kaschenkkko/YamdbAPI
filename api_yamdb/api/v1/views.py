@@ -38,14 +38,13 @@ class UserViewSet(viewsets.ModelViewSet):
         if request.method == 'GET':
             serializer = UserSerializer(request.user)
             return Response(serializer.data)
-        else:
-            serializer = UserSerializer(request.user, data=request.data,
-                                        partial=True)
-            serializer.is_valid(raise_exception=True)
-            if request.user.is_admin:
-                serializer.save()
-            serializer.save(role=request.user.role)
-            return Response(serializer.data, status=status.HTTP_200_OK)
+        serializer = UserSerializer(request.user, data=request.data,
+                                    partial=True)
+        serializer.is_valid(raise_exception=True)
+        if request.user.is_admin:
+            serializer.save()
+        serializer.save(role=request.user.role)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class SignUpViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
