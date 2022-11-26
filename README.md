@@ -10,7 +10,7 @@ $ git clone git@github.com:clownvkkaschenko/yamdb_final.git
 ```
 Cоздайте файл .env в папке infra:
 ```
-$ touch infra_sp2/infra/.env
+$ touch infra/.env
 ```
 Заполните этот файл, придумайте и введите пароль в последней строке:
 ```
