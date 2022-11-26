@@ -6,7 +6,7 @@
 ### Запуск приложения:
 Клонируйте репозиторий и перейти в корневую папку:
 ```
-$ git clone git@github.com:clownvkkaschenko/infra_sp2.git
+$ git clone git@github.com:clownvkkaschenko/yamdb_final.git
 ```
 Cоздайте файл .env в папке infra:
 ```
