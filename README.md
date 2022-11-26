@@ -55,7 +55,7 @@ http://localhost/
     sudo apt install docker.io
     ```
 - Установите docker-compose, с этим вам поможет [официальная документация](https://docs.docker.com/compose/install/)
-- Скопируйте файлы docker-compose.yaml и nginx/default.conf из вашего проекта на сервер в home/<ваш_username>/docker-compose.yaml и home/<ваш_username>/nginx/default.conf соответственно
+- Скопируйте файлы docker-compose.yaml и nginx/default.conf из вашего проекта на сервер в _home/<ваш_username>/docker-compose.yaml_ и _home/<ваш_username>/nginx/default.conf_ соответственно
 - Добавьте в Secrets GitHub Actions переменные окружения для работы базы данных
 ### GitHub Actions:
 Для запуска инструкций workflow добавьте в Secrets GitHub Actions переменные окружения. Имя переменных можно посмотреть в файле yamdb_workflow.yml. После этого, при пуше проекта, GitHub будет автоматически запускать тесты:
