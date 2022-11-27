@@ -43,7 +43,7 @@ http://localhost/
 ### Загрузка данных из fixture.json в бд:
 ```
 ~$ docker cp fixture.json <container_id>:app/
-~$ docker-compose exec web python manage.py loaddata fixtures.json
+~$ docker-compose exec web python manage.py loaddata fixture.json
 ```
 ### Загрузка данных из csv файлов в бд:
 ```
