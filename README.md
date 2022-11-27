@@ -42,7 +42,8 @@ http://localhost/
 ```
 ### Загрузка данных из fixture.json в бд:
 ```
-~$ docker-compose exec web python manage.py loaddata fixture.json
+~$ docker cp fixture.json <container_id>:app/
+~$ docker-compose exec web python manage.py loaddata fixtures.json
 ```
 ### Загрузка данных из csv файлов в бд:
 ```
@@ -156,8 +157,10 @@ Response sample (status code = 201):
 ```
 ### Документация:
 Доступна по адресу http://localhost/redoc/
+
 ### Проект доступен по адресу:
-##### 84.201.177.80
+##### http://84.201.177.80
+
 ### Используемые технологии:
 - [Python 3.7.9](https://www.python.org/)
 - [Django 2.2.19](https://www.djangoproject.com/)
