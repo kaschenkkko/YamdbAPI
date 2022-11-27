@@ -159,7 +159,7 @@ Response sample (status code = 201):
 Доступна по адресу http://localhost/redoc/
 
 ### Проект доступен по адресу:
-##### http://84.201.177.80
+http://84.201.177.80
 
 ### Используемые технологии:
 - [Python 3.7.9](https://www.python.org/)
