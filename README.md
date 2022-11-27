@@ -33,16 +33,20 @@ POSTGRES_PASSWORD=password
 ```
 ### Теперь проект доступен по адресу:
 http://localhost/
-### Загрузка данных из csv файлов в бд:
-```
-~$ docker-compose exec web python manage.py load_csv
-```
 ### Остановка и запуск docker-compose:
 ```
 ~$ docker-compose stop
 ```
 ```
 ~$ docker-compose start
+```
+### Загрузка данных из fixture.json в бд:
+```
+~$ docker-compose exec web python manage.py loaddata fixture.json
+```
+### Загрузка данных из csv файлов в бд:
+```
+~$ docker-compose exec web python manage.py load_csv
 ```
 ### Запуск проекта на сервере:
 - Войдите на свой удаленный сервер в облаке
@@ -57,6 +61,13 @@ http://localhost/
 - Установите docker-compose, с этим вам поможет [официальная документация](https://docs.docker.com/compose/install/)
 - Скопируйте файлы docker-compose.yaml и nginx/default.conf из вашего проекта на сервер в _home/<ваш_username>/docker-compose.yaml_ и _home/<ваш_username>/nginx/default.conf_ соответственно
 - Добавьте в Secrets GitHub Actions переменные окружения для работы базы данных
+- Выполните эти команды, после чего проект будет работать на вашем сервере
+    ```
+    ~$ sudo docker-compose up -d --build
+    ~$ sudo docker-compose exec web python manage.py migrate
+    ~$ sudo docker-compose exec web python manage.py createsuperuser
+    ~$ sudo docker-compose exec web python manage.py collectstatic --no-input
+    ```
 ### GitHub Actions:
 Для запуска инструкций workflow добавьте в Secrets GitHub Actions переменные окружения. Имя переменных можно посмотреть в файле yamdb_workflow.yml. После этого, при пуше проекта, GitHub будет автоматически запускать тесты:
 - проверки кода на соответствие стандарту PEP8 (с помощью пакета flake8) и запускать pytest из репозитория yamdb_final
@@ -145,6 +156,8 @@ Response sample (status code = 201):
 ```
 ### Документация:
 Доступна по адресу http://localhost/redoc/
+### Проект доступен по адресу:
+##### 84.201.177.80
 ### Используемые технологии:
 - [Python 3.7.9](https://www.python.org/)
 - [Django 2.2.19](https://www.djangoproject.com/)
