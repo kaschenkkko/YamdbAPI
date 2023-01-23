@@ -5,13 +5,11 @@ from users.models import User
 class Category(models.Model):
     name = models.CharField(
         verbose_name='Название категории',
-        unique=True,
-        max_length=256
+        unique=True, max_length=256
     )
     slug = models.SlugField(
         verbose_name='Адрес в URL - category/',
-        unique=True,
-        max_length=50
+        unique=True, max_length=50
     )
 
     class Meta:
@@ -53,20 +51,15 @@ class Title(models.Model):
     )
     description = models.CharField(
         verbose_name='Описание произведения',
-        max_length=1000,
-        null=True
+        max_length=1000, null=True
     )
     genre = models.ManyToManyField(
-        Genre,
-        related_name='titles',
+        Genre, related_name='titles',
         verbose_name='Жанры произведения'
     )
     category = models.ForeignKey(
-        Category,
-        on_delete=models.SET_NULL,
-        related_name='titles',
-        blank=True,
-        null=True,
+        Category, on_delete=models.SET_NULL,
+        related_name='titles', blank=True, null=True,
         verbose_name='Категория произведения'
     )
 

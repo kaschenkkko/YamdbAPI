@@ -22,7 +22,8 @@ class SignUpSerializer(serializers.ModelSerializer):
         if username == 'me':
             raise serializers.ValidationError(
                 'Использовать имя me в '
-                'качестве username запрещено.')
+                'качестве username запрещено.'
+            )
         if User.objects.filter(username=username).exists():
             raise serializers.ValidationError(
                 'Такой username уже занят, надо придумать другой.'

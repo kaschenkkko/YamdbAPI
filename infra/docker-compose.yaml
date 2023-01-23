@@ -9,7 +9,7 @@ services:
       - ./.env
 
   web:
-    image: kaschenko/yamdb_final:latest
+    image: kaschenko/yamdb_final:v1.01
     restart: always
     volumes:
       - static_value:/app/static/
