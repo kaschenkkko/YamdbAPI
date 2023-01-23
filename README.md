@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Nginx-blue"/>
   <img src="https://img.shields.io/badge/Gunicorn-yellow"/>
 </div>
-<img src="https://github.com/clownvkkaschenko/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg"/>
+<img src="https://github.com/clownvkkaschenko/YamdbAPI/actions/workflows/yamdb_workflow.yml/badge.svg"/>
 
 Проект YaMDb собирает отзывы пользователей о фильмах, книгах и музыке. Благодарные или возмущённые пользователи оставляют к произведениям текстовые отзывы и ставят произведению оценку в диапазоне от 1 до 10, из пользовательских оценок формируется рейтинг.
 
@@ -16,7 +16,7 @@
 ### Запуск проекта:
 Клонируйте репозиторий и перейти в корневую папку:
 ```
-git clone git@github.com:clownvkkaschenko/yamdb_final.git
+git clone git@github.com:clownvkkaschenko/YamdbAPI.git
 ```
 Cоздайте файл .env в папке **infra** и заполните этот файл данными представленными ниже:
 ```
