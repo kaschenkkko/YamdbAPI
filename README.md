@@ -37,7 +37,7 @@
   ~$ docker-compose exec web python manage.py createsuperuser
   ~$ docker-compose exec web python manage.py collectstatic --no-input
   ```
-- Загрузите подготовленые данные из fixture.json в БД:
+- Загрузите подготовленые данные из fixture.json в БД
   ```
   ~$ docker cp fixture.json <container_id>:app/
   ~$ docker-compose exec web python manage.py loaddata fixture.json
