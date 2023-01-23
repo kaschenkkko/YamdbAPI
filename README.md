@@ -14,34 +14,34 @@
 Проект был разработан в команде из трёх разработчиков:
 - **Иван Конышкин, Дамир Матюхин, Николай Гусев.**
 ### Запуск проекта:
-Клонируйте репозиторий и перейти в корневую папку:
-```
-git clone git@github.com:clownvkkaschenko/YamdbAPI.git
-```
-Cоздайте файл .env в папке **infra** и заполните этот файл данными представленными ниже:
-```
-DB_ENGINE=django.db.backends.postgresql
-DB_NAME=postgres
-POSTGRES_USER=postgres
-DB_HOST=db
-DB_PORT=5432
-POSTGRES_PASSWORD=password
-```
-Из папки **infra** и запустите docker-compose:
-```
-~$ docker-compose up -d --build
-```
-В контейнере web выполните миграции, создайте суперпользователя и соберите статику:
-```
-~$ docker-compose exec web python manage.py migrate
-~$ docker-compose exec web python manage.py createsuperuser
-~$ docker-compose exec web python manage.py collectstatic --no-input
-```
-Загрузите подготовленые данные из fixture.json в БД:
-```
-~$ docker cp fixture.json <container_id>:app/
-~$ docker-compose exec web python manage.py loaddata fixture.json
-```
+- Клонируйте репозиторий и перейдите в него 
+  ```
+  git clone git@github.com:clownvkkaschenko/YamdbAPI.git
+  ```
+- Cоздайте файл .env в папке **infra** и заполните этот файл данными представленными ниже
+  ```
+  DB_ENGINE=django.db.backends.postgresql
+  DB_NAME=postgres
+  POSTGRES_USER=postgres
+  DB_HOST=db
+  DB_PORT=5432
+  POSTGRES_PASSWORD=password
+  ```
+- Из папки **infra** и запустите docker-compose
+  ```
+  ~$ docker-compose up -d --build
+  ```
+- В контейнере web выполните миграции, создайте суперпользователя и соберите статику
+  ```
+  ~$ docker-compose exec web python manage.py migrate
+  ~$ docker-compose exec web python manage.py createsuperuser
+  ~$ docker-compose exec web python manage.py collectstatic --no-input
+  ```
+- Загрузите подготовленые данные из fixture.json в БД:
+  ```
+  ~$ docker cp fixture.json <container_id>:app/
+  ~$ docker-compose exec web python manage.py loaddata fixture.json
+  ```
 После этого проект будет доступен по url-адресу **localhost/api/v1/**
 
 Документация к API доступна по url-адресу **localhost/redoc/**
