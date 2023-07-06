@@ -1,13 +1,15 @@
 <div id="header" align="center">
   <h1>API Yamdb</h1>
-  <img src="https://img.shields.io/badge/Python-3.7.9-brightgreen"/>
-  <img src="https://img.shields.io/badge/Django-2.2.19-blueviolet"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-orange"/>
-  <img src="https://img.shields.io/badge/Docker-red"/>
-  <img src="https://img.shields.io/badge/Nginx-blue"/>
-  <img src="https://img.shields.io/badge/Gunicorn-yellow"/>
+  <img src="https://img.shields.io/badge/Python-3.7.9-F8F8FF?style=for-the-badge&logo=python&logoColor=20B2AA">
+  <img src="https://img.shields.io/badge/Django-2.2.19-F8F8FF?style=for-the-badge&logo=django&logoColor=00FF00">
+  <img src="https://img.shields.io/badge/PostgreSQL-555555?style=for-the-badge&logo=postgresql&logoColor=F5F5DC">
+  <img src="https://img.shields.io/badge/Docker-555555?style=for-the-badge&logo=docker&logoColor=2496ED">
+  <img src="https://img.shields.io/badge/nginx-555555?style=for-the-badge&logo=nginx&logoColor=009639">
+  <img src="https://img.shields.io/badge/gunicorn-555555?style=for-the-badge&logo=gunicorn&logoColor=499848">
+  <a href="https://github.com/clownvkkaschenko/YamdbAPI/actions/workflows/yamdb_workflow.yml">
+  <img src="https://img.shields.io/github/actions/workflow/status/clownvkkaschenko/YamdbAPI/yamdb_workflow.yml?branch=main&label=API%20Yamdb%20workflows&style=for-the-badge&color=F8F8FF&logo=githubactions&logoColor=2088FF"></a>
 </div>
-<img src="https://github.com/clownvkkaschenko/YamdbAPI/actions/workflows/yamdb_workflow.yml/badge.svg"/>
+
 
 Проект YaMDb собирает отзывы пользователей о фильмах, книгах и музыке. Благодарные или возмущённые пользователи оставляют к произведениям текстовые отзывы и ставят произведению оценку в диапазоне от 1 до 10, из пользовательских оценок формируется рейтинг.
 
