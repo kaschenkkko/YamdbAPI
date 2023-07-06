@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/nginx-555555?style=for-the-badge&logo=nginx&logoColor=009639">
   <img src="https://img.shields.io/badge/gunicorn-555555?style=for-the-badge&logo=gunicorn&logoColor=499848">
   <a href="https://github.com/clownvkkaschenko/YamdbAPI/actions/workflows/yamdb_workflow.yml">
-  <img src="https://img.shields.io/github/actions/workflow/status/clownvkkaschenko/YamdbAPI/yamdb_workflow.yml?branch=main&label=API Yamdb workflows&style=for-the-badge&color=F8F8FF&logo=githubactions&logoColor=2088FF"><a>
+  <img src="https://img.shields.io/github/actions/workflow/status/clownvkkaschenko/YamdbAPI/yamdb_workflow.yml?branch=master&label=API Yamdb workflows&style=for-the-badge&color=F8F8FF&logo=githubactions&logoColor=2088FF"><a>
 </div>
 
 
